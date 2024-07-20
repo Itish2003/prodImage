@@ -1,0 +1,211 @@
+.sign-in5-container {
+    gap: var(--dl-space-space-unit);
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .sign-in5-max-width {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .sign-in5-container1 {
+    gap: var(--dl-space-space-twounits);
+    width: auto;
+    height: 100%;
+    display: flex;
+    z-index: 100;
+    max-width: 500px;
+    align-items: center;
+    border-radius: var(--dl-radius-radius-radius4);
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--dl-color-theme-neutral-light);
+    border-top-left-radius: var(--dl-radius-radius-cardradius);
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--dl-radius-radius-cardradius);
+    border-bottom-right-radius: 0;
+  }
+  .sign-in5-form-root {
+    gap: var(--dl-space-space-twounits);
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: var(--dl-radius-radius-radius4);
+    flex-direction: column;
+    justify-content: center;
+  }
+  .sign-in5-container2 {
+    gap: var(--dl-space-space-halfunit);
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .sign-in5-text1 {
+    align-self: center;
+  }
+  .sign-in5-container3 {
+    gap: var(--dl-space-space-unit);
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .sign-in5-button {
+    gap: var(--dl-space-space-halfunit);
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    border-color: var(--dl-color-theme-primary1);
+    border-style: solid;
+    border-width: 1px;
+    justify-content: center;
+  }
+  .sign-in5-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .sign-in5-button1 {
+    gap: var(--dl-space-space-halfunit);
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    border-color: var(--dl-color-theme-primary1);
+    border-style: solid;
+    border-width: 1px;
+    justify-content: center;
+  }
+  .sign-in5-icon2 {
+    width: 24px;
+    height: 24px;
+  }
+  .sign-in5-button2 {
+    gap: var(--dl-space-space-halfunit);
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    border-color: var(--dl-color-theme-primary1);
+    border-style: solid;
+    border-width: 1px;
+    justify-content: center;
+  }
+  .sign-in5-icon4 {
+    width: 24px;
+    height: 24px;
+  }
+  .sign-in5-container4 {
+    flex: 0 0 auto;
+    width: 400px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    border-radius: var(--dl-radius-radius-radius4);
+    flex-direction: column;
+    border-top-left-radius: 0;
+    border-top-right-radius: var(--dl-radius-radius-radius4);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: var(--dl-radius-radius-radius4);
+  }
+  .sign-in5-image {
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    object-fit: cover;
+    border-radius: var(--dl-radius-radius-radius4);
+    border-top-left-radius: 0;
+    border-top-right-radius: var(--dl-radius-radius-cardradius);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: var(--dl-radius-radius-cardradius);
+  }
+  .sign-in5-sign-up-image {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    bottom: 0px;
+    height: 100%;
+    position: absolute;
+  }
+  .sign-in5-container5 {
+    top: 0px;
+    flex: 0 0 auto;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    border: 2px dashed rgba(120, 120, 120, 0.4);
+    bottom: 0px;
+    height: 100%;
+    display: flex;
+    z-index: 10;
+    position: absolute;
+    align-items: flex-start;
+    flex-direction: column;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.4);
+    background-image: url("https://images.unsplash.com/photo-1579492450119-80542d516179?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDF8fGNvbmNyZXRlfGVufDB8fHx8MTcxMzI2MTA0N3ww&ixlib=rb-4.0.3&w=1500");
+  }
+  .sign-in5-text5 {
+    align-self: center;
+  }
+  @media(max-width: 991px) {
+    .sign-in5-max-width {
+      margin-top: var(--dl-space-space-twounits);
+      margin-bottom: var(--dl-space-space-twounits);
+    }
+    .sign-in5-form-root {
+      width: 100%;
+    }
+  }
+  @media(max-width: 767px) {
+    .sign-in5-max-width {
+      margin-top: var(--dl-space-space-twounits);
+      margin-bottom: var(--dl-space-space-twounits);
+    }
+    .sign-in5-container1 {
+      border-radius: var(--dl-radius-radius-cardradius);
+      border-top-right-radius: var(--dl-radius-radius-cardradius);
+      border-bottom-right-radius: var(--dl-radius-radius-cardradius);
+    }
+    .sign-in5-container4 {
+      display: none;
+    }
+  }
+  @media(max-width: 479px) {
+    .sign-in5-max-width {
+      width: 100%;
+    }
+    .sign-in5-container1 {
+      width: 100%;
+    }
+    .sign-in5-form-root {
+      padding: 0px;
+    }
+    .sign-in5-text1 {
+      text-align: center;
+    }
+    .sign-in5-button {
+      width: 100%;
+    }
+    .sign-in5-button1 {
+      width: 100%;
+    }
+    .sign-in5-button2 {
+      width: 100%;
+    }
+  }
+  

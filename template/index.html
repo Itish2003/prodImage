@@ -1,26 +1,686 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <link rel="stylesheet" href="/css/page.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
     <title>Image Effects</title>
-</head>
+    <meta property="og:title" content="Coordinated Swift Barracuda" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
 
-<body>
-    <section class="wrapper">
-        <div class="top">Image Effects</div>
-        <div class="bottom" aria-hidden="true">Image Effects</div>
-    </section>
-    <div class="holder">
-        <form action="/v1/upload" method="post" enctype="multipart/form-data">
-            <label for="file">Choose an image:</label>
-            <input type="file" name="file" accept=".png, .jpg, .jpeg" required>
-            <br>
-            <button class="button-27 mt-2" role="button" type="submit">Upload</button>
-        </form>
+    <style data-tag="reset-style-sheet">
+      html { line-height: 1.15; }
+      body { margin: 0; }
+      * { box-sizing: border-box; border-width: 0; border-style: solid; }
+      p, li, ul, pre, div, h1, h2, h3, h4, h5, h6, figure, blockquote, figcaption { margin: 0; padding: 0; }
+      button { background-color: transparent; }
+      button, input, optgroup, select, textarea { font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0; }
+      button, select { text-transform: none; }
+      button, [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; -moz-appearance: button; -ms-appearance: button; appearance: button; }
+      button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner { border-style: none; padding: 0; }
+      button:-moz-focus, [type="button"]:-moz-focus, [type="reset"]:-moz-focus, [type="submit"]:-moz-focus { outline: 1px dotted ButtonText; }
+      a { color: inherit; text-decoration: inherit; }
+      input { padding: 2px 4px; }
+      img { display: block; }
+      html { scroll-behavior: smooth; }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background-color: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+        <link rel="stylesheet" href="../css/page.css"/>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="../css/style.css" />
+    <div>
+      <link href="../css/index.css" rel="stylesheet" />
+
+      <div class="home-container">
+        <header class="navbar1-container12">
+          <header data-thq="thq-navbar" class="navbar1-navbar-interactive">
+            <img
+              alt="logo"
+              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/84ec08e8-34e9-42c7-9445-d2806d156403/fac575ac-7a41-484f-b7ac-875042de11f8?org_if_sml=1&amp;force_format=original"
+              class="navbar1-image1"
+            />
+            <div data-thq="thq-navbar-nav" class="navbar1-desktop-menu">
+              <nav class="navbar1-links2">
+                <a href="https://itish2003-gwkg1rvk0-itish-srivastavas-projects.vercel.app/blog/hello-world">
+                  <fragment><span>About Me</span></fragment>
+                </a>
+                <a href="https://www.linkedin.com/in/itish-srivastava-72946b285/">
+                  <fragment><span>Linkendin</span></fragment>
+                </a>
+                <a
+                  href="https://itish2003-gwkg1rvk0-itish-srivastavas-projects.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <fragment><span>Portfolio</span></fragment>
+              </a>
+                </a>
+              </nav>
+              <div class="navbar1-buttons2">
+                <button
+                  class="navbar1-action12 thq-button-animated thq-button-filled"
+                >
+                  <span class="thq-body-small"><a href="https://github.com/Itish2003/prodImage">Repository</a></span>
+                </button>
+                <button
+                  class="navbar1-action22 thq-button-outline thq-button-animated"
+                >
+                  <span class="thq-body-small"><a href="https://docs.google.com/document/d/1ha2IX5TwpqWdZVkaE-BOedVSaqxeFNVmjKHnqPvqPo8/edit?usp=sharing">Resume</a></span>
+                </button>
+              </div>
+            </div>
+            <div data-thq="thq-burger-menu" class="navbar1-burger-menu">
+              <svg viewBox="0 0 1024 1024" class="navbar1-icon16">
+                <path
+                  d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                ></path>
+              </svg>
+            </div>
+            <div data-thq="thq-mobile-menu" class="navbar1-mobile-menu">
+              <div class="navbar1-nav">
+                <div class="navbar1-top">
+                  <img
+                    alt="logo"
+                    src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/84ec08e8-34e9-42c7-9445-d2806d156403/fac575ac-7a41-484f-b7ac-875042de11f8?org_if_sml=1&amp;force_format=original"
+                    class="navbar1-logo"
+                  />
+                  <div data-thq="thq-close-menu" class="navbar1-close-menu">
+                    <svg viewBox="0 0 1024 1024" class="navbar1-icon18">
+                      <path
+                        d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <!-- <nav class="navbar1-links3">
+                  <a href="https://www.teleporthq.io">
+                    <fragment>
+                      <span class="home-text02 thq-link thq-body-small">
+                        About Me
+                      </span>
+                    </fragment>
+                  </a>
+                  <a href="https://www.teleporthq.io">
+                    <fragment>
+                      <span class="home-text thq-link thq-body-small">
+                       Github
+                      </span>
+                    </fragment>
+                  </a>
+                  <a href="https://www.teleporthq.io">
+                    <fragment>
+                      <span class="home-text03 thq-link thq-body-small">
+                        Linkendin
+                      </span>
+                    </fragment>
+                  </a>
+                  <a href="https://www.teleporthq.io">
+                    <fragment>
+                      <span class="home-text05 thq-link thq-body-small">
+                        X
+                      </span>
+                    </fragment>
+                  </a>
+                  <a href="https://www.teleporthq.io">
+                    <fragment>
+                      <span class="home-text04 thq-link thq-body-small">
+                        Resume
+                      </span>
+                    </fragment>
+                  </a>
+                </nav>
+                <div class="navbar1-buttons3">
+                  <button class="thq-button-filled">
+                    <span>
+                      <fragment><span>Github</span></fragment>
+                    </span>
+                  </button>
+                  <button class="thq-button-outline">
+                    <span>
+                      <fragment><span><a href="https://docs.google.com/document/d/1ha2IX5TwpqWdZVkaE-BOedVSaqxeFNVmjKHnqPvqPo8/edit?usp=sharing">Resume</a></span></fragment>
+                    </span>
+                  </button>
+                </div> -->
+              </div>
+              <!-- <div class="navbar1-icon-group">
+                <svg
+                  viewBox="0 0 950.8571428571428 1024"
+                  class="thq-icon-x-small"
+                >
+                  <path
+                    d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 877.7142857142857 1024"
+                  class="thq-icon-x-small"
+                >
+                  <path
+                    d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 602.2582857142856 1024"
+                  class="thq-icon-x-small"
+                >
+                  <path
+                    d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                  ></path>
+                </svg>
+              </div> -->
+            </div>
+          </header>
+        </header>
+        <div class="sign-in5-container19 thq-section-padding">
+          <div class="sign-in5-max-width2 thq-section-max-width">
+            <div class="sign-in5-container20 thq-section-padding">
+              <div class="sign-in5-form-root">
+                <div class="sign-in5-container21">
+                  <h2>
+                    <fragment>
+                      <span class="home-text07 thq-heading-2">Image Effects</span>
+                    </fragment>
+                  </h2>
+                  <p class="sign-in5-text097 thq-body-large">
+                    ~Using primitive to apply effects to your photos...
+                  </p>
+                </div>
+                <div class="sign-in5-container22">
+                  <form action="/v1/upload" method="post" enctype="multipart/form-data">
+                    <label for="file">Choose an image:</label>
+                    <input type="file" name="file" accept=".png, .jpg, .jpeg" required>
+                    <br>
+                    <button class="button-27 mt-2" role="button" type="submit">Upload</button>
+                </form>
+                  <!-- <button class="sign-in5-button15 thq-button-outline">
+                    <svg
+                      viewBox="0 0 877.7142857142857 1024"
+                      class="sign-in5-icon26"
+                    >
+                      <path
+                        d="M713.143 73.143c90.857 0 164.571 73.714 164.571 164.571v548.571c0 90.857-73.714 164.571-164.571 164.571h-107.429v-340h113.714l17.143-132.571h-130.857v-84.571c0-38.286 10.286-64 65.714-64l69.714-0.571v-118.286c-12-1.714-53.714-5.143-101.714-5.143-101.143 0-170.857 61.714-170.857 174.857v97.714h-114.286v132.571h114.286v340h-304c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571z"
+                      ></path>
+                    </svg>
+                    <span class="thq-body-small">Continue with Facebook</span>
+                  </button> -->
+                  <!-- <button class="sign-in5-button16 thq-button-outline">
+                    <svg
+                      viewBox="0 0 860.0137142857142 1024"
+                      class="sign-in5-icon28"
+                    >
+                      <path
+                        d="M438.857 449.143h414.286c4 22.286 6.857 44 6.857 73.143 0 250.286-168 428.571-421.143 428.571-242.857 0-438.857-196-438.857-438.857s196-438.857 438.857-438.857c118.286 0 217.714 43.429 294.286 114.857l-119.429 114.857c-32.571-31.429-89.714-68-174.857-68-149.714 0-272 124-272 277.143s122.286 277.143 272 277.143c173.714 0 238.857-124.571 249.143-189.143h-249.143v-150.857z"
+                      ></path>
+                    </svg>
+                    <span class="thq-body-small">Continue with Google</span>
+                  </button> -->
+                  <!-- <button class="sign-in5-button17 thq-button-outline">
+                    <svg viewBox="0 0 1024 1024" class="sign-in5-icon30">
+                      <path
+                        d="M854 342v-86l-342 214-342-214v86l342 212zM854 170q34 0 59 26t25 60v512q0 34-25 60t-59 26h-684q-34 0-59-26t-25-60v-512q0-34 25-60t59-26h684z"
+                      ></path>
+                    </svg>
+                    <span class="thq-body-small">Continue with Email</span>
+                  </button> -->
+                </div>
+              </div>
+            </div>
+            <div class="sign-in5-container23">
+              <img
+                alt="Image"
+                src="https://images.unsplash.com/photo-1518709911915-712d5fd04677?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDEwfHxzaWduJTIwaW58ZW58MHx8fHwxNzEzMjYwNjUyfDA&amp;ixlib=rb-4.0.3&amp;h=500"
+                class="sign-in5-image thq-img-ratio-4-6"
+              />
+            </div>
+          </div>
+          <!-- <img
+            alt="SignUp Image"
+            src="https://i.ibb.co/SRC5wVH/cherry.jpg&amp;ixlib=rb-4.0.3&amp;w=1500"
+            class="sign-in5-sign-up-image thq-img-ratio-16-9"
+          /> -->
+          <div class="sign-in5-container24"></div>
+        </div>
+
+
+        
+        <div class="content-list5-container13 thq-section-padding">
+          <div
+            class="content-list5-max-width1 thq-flex-column thq-section-max-width"
+          >
+            <div
+              class="content-list5-container14 thq-section-max-width thq-flex-row"
+            >
+              <button class="thq-button-filled">
+                <span>
+                  <fragment><span>Terms of service</span></fragment>
+                </span>
+              </button>
+              <button class="thq-button-outline">
+                <span>
+                  <fragment><span>Get Started</span></fragment>
+                </span>
+              </button>
+              <button class="thq-button-filled">
+                <span>
+                  <fragment><span>Dafault values and actions</span></fragment>
+                </span>
+              </button>
+              <button class="thq-button-outline">
+                <span>
+                  <fragment><span>Refund Policy</span></fragment>
+                </span>
+              </button>
+            </div>
+
+            
+            <div class="content-list5-container15 thq-flex-column">
+              <div class="content-list5-container16">
+                <ul class="thq-flex-column">
+                  <li class="content-list5-li13 list-item thq-flex-column">
+                    <h2>
+                      <fragment>
+                        <span class="home-text14 thq-heading-2">
+                          Terms of service
+                        </span>
+                      </fragment>
+                    </h2>
+                    <p>
+                      <fragment>
+                        <span class="thq-body-small">
+                          Lorem ipsum dolor sit amet. Vel dolores illum est
+                          aperiam quis nam voluptatem quia et omnis autem qui
+                          dolore ullam sed fugiat cumque! Qui accusamus
+                          assumenda et molestias eius et error sunt. Id
+                          recusandae nostrum ea officiis voluptatem in nisi
+                          consequatur sed quia tenetur sit alias molestias qui
+                          illum soluta. Est nesciunt perferendis eum sint rerum
+                          33 cupiditate dolorem id corrupti laboriosam ut
+                          debitis veniam ut ipsam fugit vel sunt consequatur. Et
+                          nobis quasi et cumque adipisci aut molestiae eligendi
+                          quo inventore dicta ea suscipit sequi sed veritatis
+                          nemo.
+                        </span>
+                      </fragment>
+                    </p>
+                    <ul class="content-list5-ul07 thq-flex-column">
+                      <li class="list-item">
+                        <h3>
+                          <fragment>
+                            <span class="thq-heading-3">
+                              General Terms and Conditions
+                            </span>
+                          </fragment>
+                        </h3>
+                        <p>
+                          <fragment>
+                            <span>
+                              Default values are predefined settings or actions
+                              that are automatically assigned unless a different
+                              value is chosen by the user. They provide a
+                              starting point or standard configuration for
+                              various features.
+                            </span>
+                          </fragment>
+                        </p>
+                      </li>
+                      <li class="list-item">
+                        <h3>
+                          <fragment>
+                            <span class="thq-heading-3">
+                              Products and Services
+                            </span>
+                          </fragment>
+                        </h3>
+                        <p>
+                          <fragment>
+                            <span class="thq-body-small">
+                              Lorem ipsum dolor sit amet. Est vitae blanditiis
+                              ab aliquam tempore aut ipsam iusto in sunt
+                              repellat ex voluptatum inventore ab facilis
+                              galisum ea consequatur consequuntur. Ab voluptas
+                              voluptatem eum consequatur aspernatur non
+                              laboriosam atque est labore asperiores a neque
+                              quos. Ea nemo modi hic dicta saepe et veritatis
+                              maiores At praesentium aliquid. Sed dolores
+                              architecto non doloribus quia eos consectetur
+                              commodi non tenetur vitae est neque omnis. Non
+                              perspiciatis velit At aliquam rerum ut officiis
+                              ipsa id minima eius ut sapiente nobis et nemo
+                              neque. Aut maiores tempora in officiis sunt eum
+                              voluptatem tenetur sit iste reprehenderit ea nisi
+                              dolor. Ea impedit omnis ad internos autem ut esse
+                              sunt ad saepe maiores vel perferendis veritatis.
+                              Ex magni fugiat ut reprehenderit laudantium sit
+                              galisum ipsam eos tempora doloribus sed
+                              accusantium nobis eum praesentium quod.
+                            </span>
+                          </fragment>
+                        </p>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-list5-container17">
+                <ul class="thq-flex-column">
+                  <li class="content-list5-li16 list-item thq-flex-column">
+                    <h1>
+                      <fragment>
+                        <span class="home-text11 thq-heading-2">
+                          Default Values and Actions
+                        </span>
+                      </fragment>
+                    </h1>
+                    <span>
+                      <fragment>
+                        <span class="thq-body-small">
+                          Welcome to our website dedicated to default values and
+                          actions. Here you will find all the information you
+                          need to understand and manage default settings.
+                        </span>
+                      </fragment>
+                    </span>
+                    <ul class="content-list5-ul09 thq-flex-column">
+                      <li class="list-item">
+                        <h1>
+                          <fragment>
+                            <span class="thq-heading-3">
+                              What are Default Values?
+                            </span>
+                          </fragment>
+                        </h1>
+                        <span>
+                          <fragment>
+                            <span class="thq-body-small">
+                              Default values are predefined settings or actions
+                              that are automatically assigned unless a different
+                              value is chosen by the user. They provide a
+                              starting point or standard configuration for
+                              various features.
+                            </span>
+                          </fragment>
+                        </span>
+                      </li>
+                      <li class="list-item">
+                        <h1>
+                          <fragment>
+                            <span class="thq-heading-3">
+                              Importance of Default Actions
+                            </span>
+                          </fragment>
+                        </h1>
+                        <span>
+                          <fragment>
+                            <span class="thq-body-small">
+                              Default actions help streamline processes, improve
+                              user experience, and ensure consistency across
+                              different platforms. Understanding default actions
+                              is crucial for efficient workflow.
+                            </span>
+                          </fragment>
+                        </span>
+                      </li>
+                      <li class="list-item">
+                        <h1>
+                          <fragment>
+                            <span class="thq-heading-3">
+                              Managing Default Settings
+                            </span>
+                          </fragment>
+                        </h1>
+                        <span>
+                          <fragment>
+                            <span class="thq-body-small">
+                              Learn how to customize default settings to suit
+                              your preferences and optimize your experience.
+                              Explore our guides and tutorials to make the most
+                              out of default values.
+                            </span>
+                          </fragment>
+                        </span>
+                      </li>
+                      <li class="list-item">
+                        <h1>
+                          <fragment>
+                            <span class="thq-heading-3">Campaign tracking</span>
+                          </fragment>
+                        </h1>
+                        <span>
+                          <fragment>
+                            <span class="thq-body-small">
+                              Lorem ipsum dolor sit amet. Ut cumque cupiditate
+                              eos perferendis tempora et ullam quis qui fugiat
+                              necessitatibus qui quia dolorem 33 earum
+                              reprehenderit eum rerum blanditiis. Et vitae
+                              distinctio 33 magni ratione ut odit rerum est
+                              nihil error et minus dolor quo harum fugiat. Eos
+                              quam assumenda id fugit optio aut magni sunt! Ut
+                              iure aliquam vel velit modi sit voluptatibus atque
+                              ut corporis sint sit omnis enim a pariatur
+                              officiis aut nulla voluptate. In facere incidunt
+                              aut sapiente maxime qui quibusdam facilis non
+                              officia consectetur sit laboriosam libero aut
+                              cupiditate possimus ut sunt reiciendis. Et
+                              repudiandae magnam aut quaerat ipsam aut repellat
+                              laboriosam. Ab facilis deleniti ut voluptas
+                              molestiae sed omnis maiores ut aliquid culpa vel
+                              nesciunt saepe. Aut placeat aspernatur aut alias
+                              nihil vel neque recusandae et corrupti accusantium
+                              ab quod temporibus ut nulla eaque et magnam nemo.
+                              Ad sunt minus rem earum delectus hic officia iste
+                              qui sunt quos non officiis illo vel doloribus
+                              perspiciatis. Ab soluta eius sed quidem dolores
+                              rem necessitatibus minus 33 minus commodi. Nam
+                              repudiandae libero non laboriosam voluptate et
+                              saepe fuga vel repudiandae pariatur aut assumenda
+                              illo.
+                            </span>
+                          </fragment>
+                        </span>
+                      </li>
+                      <li class="list-item">
+                        <h1>
+                          <fragment>
+                            <span class="thq-heading-3">Cookies</span>
+                          </fragment>
+                        </h1>
+                        <span>
+                          <fragment>
+                            <span class="thq-body-small">
+                              Ut doloremque aliquam qui veniam deserunt sit
+                              voluptates iusto et unde quod ut quam unde ut nemo
+                              eius! Ut saepe consequuntur non quibusdam soluta
+                              aut maiores eaque et rerum error nam incidunt
+                              saepe aut nihil voluptatem. 33 nulla quaerat est
+                              doloremque voluptatem ut libero magnam id placeat
+                              aliquid. Ea minus totam est inventore minus sed
+                              temporibus aperiam At ratione maiores eum libero
+                              consequatur aut laborum exercitationem.
+                            </span>
+                          </fragment>
+                        </span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-list5-container18">
+                <ul class="thq-flex-column">
+                  <li class="content-list5-li22 list-item thq-flex-column">
+                    <h1>
+                      <fragment>
+                        <span class="home-text21 thq-heading-2">
+                          Refund Policy
+                        </span>
+                      </fragment>
+                    </h1>
+                    <span>
+                      <fragment>
+                        <span class="thq-body-small">
+                          Lorem ipsum dolor sit amet. Vel dolores illum est
+                          aperiam quis nam voluptatem quia et omnis autem qui
+                          dolore ullam sed fugiat cumque! Qui accusamus
+                          assumenda et molestias eius et error sunt. Id
+                          recusandae nostrum ea officiis voluptatem in nisi
+                          consequatur sed quia tenetur sit alias molestias qui
+                          illum soluta. Est nesciunt perferendis eum sint rerum
+                          33 cupiditate dolorem id corrupti laboriosam ut
+                          debitis veniam ut ipsam fugit vel sunt consequatur. Et
+                          nobis quasi et cumque adipisci aut molestiae eligendi
+                          quo inventore dicta ea suscipit sequi sed veritatis
+                          nemo.
+                        </span>
+                      </fragment>
+                    </span>
+                    <ul class="content-list5-ul11 thq-flex-column">
+                      <li class="list-item">
+                        <h1>
+                          <fragment>
+                            <span class="thq-heading-3">General</span>
+                          </fragment>
+                        </h1>
+                        <span>
+                          <fragment>
+                            <span class="thq-body-small">
+                              Lorem ipsum dolor sit amet. Nam nihil facilis sit
+                              consequuntur internos qui minima rerum ut
+                              molestias laudantium aut iusto deserunt. Aut
+                              voluptatibus excepturi qui officia laudantium est
+                              repellendus tempore hic sunt debitis. Ut galisum
+                              tempore in enim fugit eum pariatur possimus est
+                              tenetur nemo et sint sint et dolores Quis. Aut
+                              illum perspiciatis rem architecto culpa et fuga
+                              aliquid. Est omnis praesentium ut nisi internos
+                              rem quod totam et similique quis. Est tempore
+                              cumque aut recusandae labore qui error molestiae
+                              et possimus quia! Eum Quis asperiores non nihil
+                              tempora qui quia voluptatem aut aspernatur
+                              aspernatur aut asperiores labore et sapiente
+                              quaerat qui suscipit quia. Ea nesciunt iste aut
+                              temporibus culpa sit dignissimos quaerat eum
+                              architecto voluptatum et nemo velit At harum
+                              harum.
+                            </span>
+                          </fragment>
+                        </span>
+                      </li>
+                      <li class="list-item">
+                        <h1>
+                          <fragment>
+                            <span class="thq-heading-3">
+                              Damages and issues
+                            </span>
+                          </fragment>
+                        </h1>
+                        <span>
+                          <fragment>
+                            <span class="thq-body-small">
+                              Lorem ipsum dolor sit amet. Est vitae blanditiis
+                              ab aliquam tempore aut ipsam iusto in sunt
+                              repellat ex voluptatum inventore ab facilis
+                              galisum ea consequatur consequuntur. Ab voluptas
+                              voluptatem eum consequatur aspernatur non
+                              laboriosam atque est labore asperiores a neque
+                              quos. Ea nemo modi hic dicta saepe et veritatis
+                              maiores At praesentium aliquid. Sed dolores
+                              architecto non doloribus quia eos consectetur
+                              commodi non tenetur vitae est neque omnis. Non
+                              perspiciatis velit At aliquam rerum ut officiis
+                              ipsa id minima eius ut sapiente nobis et nemo
+                              neque. Aut maiores tempora in officiis sunt eum
+                              voluptatem tenetur sit iste reprehenderit ea nisi
+                              dolor. Ea impedit omnis ad internos autem ut esse
+                              sunt ad saepe maiores vel perferendis veritatis.
+                              Ex magni fugiat ut reprehenderit laudantium sit
+                              galisum ipsam eos tempora doloribus sed
+                              accusantium nobis eum praesentium quod.
+                            </span>
+                          </fragment>
+                        </span>
+                      </li>
+                      <li class="list-item">
+                        <h1>
+                          <fragment>
+                            <span class="thq-heading-3">Refunds</span>
+                          </fragment>
+                        </h1>
+                        <span>
+                          <fragment>
+                            <span class="thq-body-small">
+                              Lorem ipsum dolor sit amet. Est vitae blanditiis
+                              ab aliquam tempore aut ipsam iusto in sunt
+                              repellat ex voluptatum inventore ab facilis
+                              galisum ea consequatur consequuntur. Ab voluptas
+                              voluptatem eum consequatur aspernatur non
+                              laboriosam atque est labore asperiores a neque
+                              quos. Ea nemo modi hic dicta saepe et veritatis
+                              maiores At praesentium aliquid. Sed dolores
+                              architecto non doloribus quia eos consectetur
+                              commodi non tenetur vitae est neque omnis. Non
+                              perspiciatis velit At aliquam rerum ut officiis
+                              ipsa id minima eius ut sapiente nobis et nemo
+                              neque. Aut maiores tempora in officiis sunt eum
+                              voluptatem tenetur sit iste reprehenderit ea nisi
+                              dolor. Ea impedit omnis ad internos autem ut esse
+                              sunt ad saepe maiores vel perferendis veritatis.
+                              Ex magni fugiat ut reprehenderit laudantium sit
+                              galisum ipsam eos tempora doloribus sed
+                              accusantium nobis eum praesentium quod.
+                            </span>
+                          </fragment>
+                        </span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
-
+    <script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script>
+  </body>
 </html>
