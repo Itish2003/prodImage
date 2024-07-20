@@ -156,7 +156,7 @@ func UploadImage(c *gin.Context) {
 	}
 
 	// Open the processed file
-	processedFilePath := "static/processed/" + filename
+	// processedFilePath := "static/processed/" + filename
 	processedFile, err := os.Open("static/processed/" + filename)
 	if err != nil {
 		c.String(http.StatusInternalServerError, "Unable to open processed file: %v", err)
@@ -182,11 +182,11 @@ func UploadImage(c *gin.Context) {
 	}
 
 	// Remove the processed file after uploading
-	if err := os.Remove(processedFilePath); err != nil {
-		c.String(http.StatusInternalServerError, "Unable to delete processed file: %v", err)
-		log.Printf("Delete processed file error: %v", err)
-		return
-	}
+	// if err := os.Remove(processedFilePath); err != nil {
+	// 	c.String(http.StatusInternalServerError, "Unable to delete processed file: %v", err)
+	// 	log.Printf("Delete processed file error: %v", err)
+	// 	return
+	// }
 
 	nickname := c.PostForm("nickname")
 
