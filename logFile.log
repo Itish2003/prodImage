@@ -1,0 +1,19 @@
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (2 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (2 handlers)
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (2 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (2 handlers)
+[GIN-debug] Loaded HTML Templates (3): 
+	- 
+	- index.html
+	- result.html
+
+[GIN-debug] PATCH  /v1/update/:name          --> prodImage/service.UpdateImage (2 handlers)
+[GIN-debug] POST   /v1/upload                --> prodImage/service.UploadImage (2 handlers)
+[GIN-debug] GET    /v1/get/:name             --> prodImage/service.GetImage (2 handlers)
+[GIN-debug] GET    /v1/getall                --> prodImage/service.GetAllImage (2 handlers)
+[GIN-debug] GET    /v1/home                  --> prodImage/service.GetHome (2 handlers)
+[GIN-debug] GET    /v1/download/:name        --> prodImage/service.DownloadImage (2 handlers)
+[GIN-debug] DELETE /v1/delete/:name          --> prodImage/service.DeleteImage (2 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080

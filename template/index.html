@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/css/page.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Effects</title>
+</head>
+
+<body>
+    <section class="wrapper">
+        <div class="top">Image Effects</div>
+        <div class="bottom" aria-hidden="true">Image Effects</div>
+    </section>
+    <div class="holder">
+        <form action="/v1/upload" method="post" enctype="multipart/form-data">
+            <label for="file">Choose an image:</label>
+            <input type="file" name="file" accept=".png, .jpg, .jpeg" required>
+            <br>
+            <button class="button-27 mt-2" role="button" type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+
+</html>
