@@ -156,10 +156,6 @@ func UploadImage(c *gin.Context) {
 	}
 
 	// Open the processed file
-<<<<<<< HEAD
-=======
-	// processedFilePath := "static/processed/" + filename
->>>>>>> 9eadcb4a69000a2a0569c714c5a3b1ed892c0fa8
 	processedFile, err := os.Open("static/processed/" + filename)
 	if err != nil {
 		c.String(http.StatusInternalServerError, "Unable to open processed file: %v", err)
@@ -184,16 +180,6 @@ func UploadImage(c *gin.Context) {
 		return
 	}
 
-<<<<<<< HEAD
-=======
-	// Remove the processed file after uploading
-	// if err := os.Remove(processedFilePath); err != nil {
-	// 	c.String(http.StatusInternalServerError, "Unable to delete processed file: %v", err)
-	// 	log.Printf("Delete processed file error: %v", err)
-	// 	return
-	// }
-
->>>>>>> 9eadcb4a69000a2a0569c714c5a3b1ed892c0fa8
 	nickname := c.PostForm("nickname")
 
 	// Generate S3 file URL
